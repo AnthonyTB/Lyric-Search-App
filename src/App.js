@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles/App.css";
-import SearchForm from "./components/searchForm";
-import ReturnResults from "./components/returnResult";
+import SearchForm from "./components/SearchForm";
+import ReturnResults from "./components/ReturnResult";
 
 class App extends React.Component {
   constructor(props) {

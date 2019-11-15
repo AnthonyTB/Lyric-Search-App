@@ -7,15 +7,15 @@ export default class searchForm extends React.Component {
     this.artistInput = this.artistInput.bind(this);
     this.songInput = this.songInput.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.apiHandler = this.apiHandler.bind(this);
   }
 
   apiHandler(artist, title) {
     const BASE_URL = "https://api.lyrics.ovh/v1";
     fetch(`${BASE_URL}/${artist}/${title}`)
       .then(res => res.json())
-      .then(resJson => this.setState({ lyrics: resJson }))
+      .then(resJson => this.setState({ lyrics: resJson.lyrics }))
       .catch(e => console.error(e));
-    console.log(this.state.lyrics);
   }
 
   artistInput(e) {
@@ -30,10 +30,12 @@ export default class searchForm extends React.Component {
     console.log(
       `The user is searching for: ${this.state.song} by ${this.state.artist}`
     );
-    apiHandler(this.state.artist, this.state.song);
+    this.apiHandler(this.state.artist, this.state.song);
   }
 
   render() {
+    console.log(this.state);
+
     return (
       <section className="form">
         <form id="js-form">
