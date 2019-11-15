@@ -1,26 +1,21 @@
 import React from "react";
 import "../styles/form.css";
-// import resultReturn from "./returnResult";
-
-function apiHandler(artist, title) {
-  const BASE_URL = "https://api.lyrics.ovh/v1";
-  fetch(`${BASE_URL}/${artist}/${title}`)
-    .then(res => res.json())
-    .then(resJson => console.log(resJson))
-    .catch(e => console.error(e));
-}
 
 export default class searchForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      artist: "",
-      song: "",
-      lyrics: ""
-    };
     this.artistInput = this.artistInput.bind(this);
     this.songInput = this.songInput.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+  }
+
+  apiHandler(artist, title) {
+    const BASE_URL = "https://api.lyrics.ovh/v1";
+    fetch(`${BASE_URL}/${artist}/${title}`)
+      .then(res => res.json())
+      .then(resJson => this.setState({ lyrics: resJson }))
+      .catch(e => console.error(e));
+    console.log(this.state.lyrics);
   }
 
   artistInput(e) {
