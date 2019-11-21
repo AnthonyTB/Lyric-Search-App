@@ -1,0 +1,38 @@
+/* Begin Imports */
+
+/* End Imports */
+
+/* Begin Results */
+
+#results-area {
+  width: 60%;
+}
+
+#artistData,
+#songData,
+#song-lyrics {
+  text-align: left;
+}
+
+i {
+  margin-right: 1%;
+  font-size: calc(10px + 2vmin);
+  color: aqua;
+}
+
+.fa-user {
+  margin-bottom: 3%;
+}
+
+#artistData,
+#songData {
+  font-size: calc(4px + 2vmin);
+  color: silver;
+}
+
+#song-lyrics {
+  color: silver;
+  font-size: calc(2px + 2vmin);
+}
+
+/* End Results */

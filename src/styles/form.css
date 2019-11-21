@@ -1,0 +1,68 @@
+/* Begin Imports */
+
+/* End Imports */
+
+/* Begin Form */
+
+#js-form {
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+/* End Form */
+
+/* Begin Form Inputs */
+
+#artist-input,
+#song-input {
+  display: block;
+  font-size: calc(3px + 2vmin);
+  background-color: transparent !important;
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: silver;
+  transition: all 0.5s ease-out;
+  margin-bottom: 10%;
+  color: silver;
+}
+
+#artist-input:focus,
+#song-input:focus {
+  border-color: aqua;
+  transition: all 0.5s ease-out;
+  color: silver;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: silver;
+  -webkit-box-shadow: 0 0 0px 1000px #282c34 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* End Form Inputs */
+
+/* Begin Submit Btn */
+
+#submitBtn {
+  background: transparent;
+  border: 0;
+  color: silver;
+  transition: all 0.5s ease-out;
+  font-size: calc(3px + 2vmin);
+}
+
+#submitBtn:hover {
+  color: aqua;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+/* End Submit Btn */
