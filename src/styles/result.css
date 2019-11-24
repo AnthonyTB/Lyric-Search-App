@@ -36,3 +36,55 @@ i {
 }
 
 /* End Results */
+
+/* Begin New Search Btn */
+
+.newSearchBtn,
+a {
+  background: transparent;
+  border: 0;
+  color: silver;
+  transition: all 0.5s ease-out;
+  font-size: calc(3px + 2vmin);
+  text-decoration: none;
+}
+
+.newSearchBtn:hover,
+a:hover {
+  color: aqua;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.fa-plus {
+  display: inline;
+  font-size: calc(-1px + 2vmin);
+}
+
+/* End New Search Btn */
+
+/* Begin Error Handling */
+
+.noLyrics {
+  color: red;
+  font-weight: 400;
+}
+
+.errorSearchBtn,
+a {
+  background: transparent;
+  border: 0;
+  color: silver;
+  transition: all 0.5s ease-out;
+  font-size: calc(3px + 2vmin);
+  text-decoration: underline;
+}
+
+.errorSearchBtn:hover,
+a:hover {
+  color: aqua;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+/* End Error Handling */

@@ -41,8 +41,12 @@ export default class returnResult extends React.Component {
       return (
         <main id="results-area">
           <div className="newSearch">
-            <button className="newSearchBtn">
-              <Link to={"/"}>search for another song</Link>
+            <button className="newSearchBtn" onClick={this.props.reset}>
+              <Link to={"/"}>
+                <div className="groupItems">
+                  New Search <i className="fas fa-plus"></i>
+                </div>
+              </Link>
             </button>
           </div>
           <hr className="line" />
@@ -61,12 +65,12 @@ export default class returnResult extends React.Component {
     } else if (this.state.error.length > 0) {
       return (
         <main id="results-area">
-          <div className="newSearch">
-            <button className="newSearchBtn">
-              <Link to={"/"}>search for another song</Link>
+          <h5 className="noLyrics">
+            Sorry I dont know what song that is.{" "}
+            <button className="errorSearchBtn" onClick={this.props.reset}>
+              <Link to={"/"}>Try searching another song</Link>
             </button>
-          </div>
-          <h5>{this.state.error}</h5>
+          </h5>
         </main>
       );
     } else {

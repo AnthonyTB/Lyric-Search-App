@@ -8,7 +8,6 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.onSubmit = this.onSubmit.bind(this);
-    this.child = React.createRef();
     this.state = {
       artist: "",
       song: "",
@@ -28,6 +27,16 @@ class App extends React.Component {
   onSubmit(e) {
     e.preventDefault();
   }
+
+  resetValues = e => {
+    e.preventDefault();
+    console.log("reseting vals");
+    this.setState({
+      artist: "",
+      song: "",
+      lyrics: ""
+    });
+  };
 
   render() {
     return (
@@ -52,7 +61,13 @@ class App extends React.Component {
         <Route
           path="/:artist/:song"
           render={routeProps => {
-            return <ReturnResults state={this.state} {...routeProps} />;
+            return (
+              <ReturnResults
+                state={this.state}
+                reset={this.resetValues}
+                {...routeProps}
+              />
+            );
           }}
         />
       </div>
