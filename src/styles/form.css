@@ -51,15 +51,18 @@ select:-webkit-autofill:focus {
 
 /* Begin Submit Btn */
 
-#submitBtn {
+#submitBtn,
+a {
   background: transparent;
   border: 0;
   color: silver;
   transition: all 0.5s ease-out;
   font-size: calc(3px + 2vmin);
+  text-decoration: none;
 }
 
-#submitBtn:hover {
+#submitBtn:hover,
+a:hover {
   color: aqua;
   transition: all 0.5s ease-out;
   cursor: pointer;

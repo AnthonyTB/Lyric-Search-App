@@ -2,71 +2,59 @@ import React from "react";
 import "./styles/App.css";
 import SearchForm from "./components/SearchForm";
 import ReturnResults from "./components/ReturnResult";
+import { Route } from "react-router-dom";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.artistInput = this.artistInput.bind(this);
-    this.songInput = this.songInput.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-    this.apiHandler = this.apiHandler.bind(this);
+    this.child = React.createRef();
     this.state = {
       artist: "",
       song: "",
       lyrics: "",
-      results: {}
+      results: {},
+      error: ""
     };
   }
 
-  apiHandler(artist, song) {
-    const BASE_URL = "https://api.lyrics.ovh/v1";
-    fetch(`${BASE_URL}/${artist}/${song}`)
-      .then(res => res.json())
-      .then(resJson =>
-        this.setState(prevState => ({
-          results: {
-            lyrics: resJson.lyrics,
-            song,
-            artist: "hi"
-          }
-        }))
-      )
-      .then(console.log(this.state))
-      .catch(e => console.log(e.message));
-  }
-
-  artistInput(newVal) {
+  artistInput = newVal => {
     this.setState({ artist: newVal });
-  }
-  songInput(newVal) {
+  };
+  songInput = newVal => {
     this.setState({ song: newVal });
-  }
+  };
 
   onSubmit(e) {
     e.preventDefault();
-    this.apiHandler(this.state.artist, this.state.song);
-    this.artistInput.value = "";
-    this.songInput.value = "";
   }
 
   render() {
-    let renderResults =
-      this.state.lyrics.length !== 0 ? (
-        <ReturnResults state={this.state} />
-      ) : (
-        ""
-      );
     return (
       <div className="App">
         <header className="App-header">
-          <SearchForm
-            store={this.state}
-            onSubmit={this.onSubmit}
-            songInput={this.songInput}
-            artistInput={this.artistInput}
+          <Route
+            exact
+            path="/"
+            render={routeProps => {
+              return (
+                <SearchForm
+                  state={this.state}
+                  onSubmit={this.onSubmit}
+                  songInput={this.songInput}
+                  artistInput={this.artistInput}
+                  {...routeProps}
+                />
+              );
+            }}
           />
         </header>
-        {renderResults}
+        <Route
+          path="/:artist/:song"
+          render={routeProps => {
+            return <ReturnResults state={this.state} {...routeProps} />;
+          }}
+        />
       </div>
     );
   }
