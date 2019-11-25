@@ -1,0 +1,16 @@
+img {
+  width: 80%;
+}
+
+/* Begin Tablet */
+@media only screen and (min-width: 768px) {
+}
+/* End Tablet */
+
+/* Begin Desktop */
+@media only screen and (min-width: 1200px) {
+  img {
+    width: 100%;
+  }
+}
+/* End Desktop */

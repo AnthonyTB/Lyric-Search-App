@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/App.css";
+import Header from "./components/Header.js";
 import SearchForm from "./components/SearchForm";
 import ReturnResults from "./components/ReturnResult";
 import { Route } from "react-router-dom";
@@ -41,23 +42,22 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <Route
-            exact
-            path="/"
-            render={routeProps => {
-              return (
-                <SearchForm
-                  state={this.state}
-                  onSubmit={this.onSubmit}
-                  songInput={this.songInput}
-                  artistInput={this.artistInput}
-                  {...routeProps}
-                />
-              );
-            }}
-          />
-        </header>
+        <Header />
+        <Route
+          exact
+          path="/"
+          render={routeProps => {
+            return (
+              <SearchForm
+                state={this.state}
+                onSubmit={this.onSubmit}
+                songInput={this.songInput}
+                artistInput={this.artistInput}
+                {...routeProps}
+              />
+            );
+          }}
+        />
         <Route
           path="/:artist/:song"
           render={routeProps => {
@@ -70,6 +70,7 @@ class App extends React.Component {
             );
           }}
         />
+        <br />
       </div>
     );
   }

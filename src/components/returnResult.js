@@ -66,7 +66,7 @@ export default class returnResult extends React.Component {
       return (
         <main id="results-area">
           <h5 className="noLyrics">
-            Sorry I dont know what song that is.{" "}
+            Sorry I dont know the lyrics to that song.{" "}
             <button className="errorSearchBtn" onClick={this.props.reset}>
               <Link to={"/"}>Try searching another song</Link>
             </button>

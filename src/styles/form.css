@@ -7,6 +7,9 @@
 #js-form {
   margin-top: 20%;
   margin-bottom: 20%;
+  background: #4b446e;
+  padding: 50px;
+  border-radius: 20px;
 }
 
 /* End Form */
@@ -28,7 +31,7 @@
 
 #artist-input:focus,
 #song-input:focus {
-  border-color: aqua;
+  border-color: #d3e668;
   transition: all 0.5s ease-out;
   color: silver;
 }
@@ -43,7 +46,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   -webkit-text-fill-color: silver;
-  -webkit-box-shadow: 0 0 0px 1000px #282c34 inset;
+  -webkit-box-shadow: 0 0 0px 1000px #4b446e inset;
   transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -63,9 +66,131 @@ a {
 
 #submitBtn:hover,
 a:hover {
-  color: aqua;
+  color: #d3e668;
   transition: all 0.5s ease-out;
   cursor: pointer;
 }
 
 /* End Submit Btn */
+
+/* Begin Tablet */
+@media only screen and (min-width: 768px) {
+  /* Begin Form */
+
+  #js-form {
+    margin-top: 20%;
+    margin-bottom: 20%;
+    background: #4b446e;
+    padding: 100px;
+    border-radius: 20px;
+  }
+
+  /* End Form */
+
+  /* Begin Form Inputs */
+
+  #artist-input,
+  #song-input {
+    display: block;
+    font-size: calc(3px + 2vmin);
+    background-color: transparent !important;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: silver;
+    transition: all 0.5s ease-out;
+    margin-bottom: 10%;
+    color: silver;
+  }
+
+  #artist-input:focus,
+  #song-input:focus {
+    border-color: #d3e668;
+    transition: all 0.5s ease-out;
+    color: silver;
+  }
+
+  /* End Form Inputs */
+
+  /* Begin Submit Btn */
+
+  #submitBtn,
+  a {
+    background: transparent;
+    border: 0;
+    color: silver;
+    transition: all 0.5s ease-out;
+    font-size: calc(3px + 2vmin);
+    text-decoration: none !important;
+  }
+
+  #submitBtn:hover,
+  a:hover {
+    color: #d3e668;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+  }
+
+  /* End Submit Btn */
+}
+/* End Tablet */
+
+/* Begin Desktop */
+@media only screen and (min-width: 1200px) {
+  /* Begin Form */
+
+  #js-form {
+    margin-top: 20%;
+    margin-bottom: 20%;
+    background: #4b446e;
+    padding: 100px;
+    border-radius: 20px;
+  }
+
+  /* End Form */
+
+  /* Begin Form Inputs */
+
+  #artist-input,
+  #song-input {
+    display: block;
+    font-size: calc(3px + 2vmin);
+    background-color: transparent !important;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: silver;
+    transition: all 0.5s ease-out;
+    margin-bottom: 10%;
+    color: silver;
+  }
+
+  #artist-input:focus,
+  #song-input:focus {
+    border-color: #d3e668;
+    transition: all 0.5s ease-out;
+    color: silver;
+  }
+
+  /* End Form Inputs */
+
+  /* Begin Submit Btn */
+
+  #submitBtn,
+  a {
+    background: transparent;
+    border: 0;
+    color: silver;
+    transition: all 0.5s ease-out;
+    font-size: calc(3px + 2vmin);
+    text-decoration: none !important;
+  }
+
+  #submitBtn:hover,
+  a:hover {
+    color: #d3e668;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+  }
+
+  /* End Submit Btn */
+}
+/* End Desktop */

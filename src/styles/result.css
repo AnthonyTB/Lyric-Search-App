@@ -6,6 +6,9 @@
 
 #results-area {
   width: 60%;
+  background: #4b446e;
+  padding: 50px;
+  border-radius: 20px;
 }
 
 #artistData,
@@ -15,9 +18,9 @@
 }
 
 i {
-  margin-right: 1%;
-  font-size: calc(10px + 2vmin);
-  color: aqua;
+  margin-right: 3%;
+  font-size: calc(4px + 2vmin);
+  color: #d3e668;
 }
 
 .fa-user {
@@ -32,7 +35,7 @@ i {
 
 #song-lyrics {
   color: silver;
-  font-size: calc(2px + 2vmin);
+  font-size: calc(4px + 2vmin);
 }
 
 /* End Results */
@@ -51,7 +54,7 @@ a {
 
 .newSearchBtn:hover,
 a:hover {
-  color: aqua;
+  color: #d3e668;
   transition: all 0.5s ease-out;
   cursor: pointer;
 }
@@ -82,9 +85,197 @@ a {
 
 .errorSearchBtn:hover,
 a:hover {
-  color: aqua;
+  color: #d3e668;
   transition: all 0.5s ease-out;
   cursor: pointer;
 }
 
 /* End Error Handling */
+
+/* Begin Tablet */
+@media only screen and (min-width: 768px) {
+  /* Begin Results */
+
+  #results-area {
+    width: 60%;
+    background: #4b446e;
+    padding: 100px;
+    border-radius: 20px;
+  }
+
+  #artistData,
+  #songData,
+  #song-lyrics {
+    text-align: left;
+  }
+
+  i {
+    margin-right: 1%;
+    font-size: calc(10px + 2vmin);
+    color: #d3e668;
+  }
+
+  .fa-user {
+    margin-bottom: 3%;
+  }
+
+  #artistData,
+  #songData {
+    font-size: calc(4px + 2vmin);
+    color: silver;
+  }
+
+  #song-lyrics {
+    color: silver;
+    font-size: calc(2px + 2vmin);
+  }
+
+  /* End Results */
+
+  /* Begin New Search Btn */
+
+  .newSearchBtn,
+  a {
+    background: transparent;
+    border: 0;
+    color: silver;
+    transition: all 0.5s ease-out;
+    font-size: calc(3px + 2vmin);
+    text-decoration: none;
+  }
+
+  .newSearchBtn:hover,
+  a:hover {
+    color: #d3e668;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+  }
+
+  .fa-plus {
+    display: inline;
+    font-size: calc(-1px + 2vmin);
+  }
+
+  /* End New Search Btn */
+
+  /* Begin Error Handling */
+
+  .noLyrics {
+    color: red;
+    font-weight: 400;
+  }
+
+  .errorSearchBtn,
+  a {
+    background: transparent;
+    border: 0;
+    color: silver;
+    transition: all 0.5s ease-out;
+    font-size: calc(3px + 2vmin);
+    text-decoration: underline;
+  }
+
+  .errorSearchBtn:hover,
+  a:hover {
+    color: #d3e668;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+  }
+
+  /* End Error Handling */
+}
+/* End Tablet */
+
+/* Begin Desktop */
+@media only screen and (min-width: 1200px) {
+  /* Begin Results */
+
+  #results-area {
+    width: 60%;
+    background: #4b446e;
+    padding: 100px;
+    border-radius: 20px;
+  }
+
+  #artistData,
+  #songData,
+  #song-lyrics {
+    text-align: left;
+  }
+
+  i {
+    margin-right: 1%;
+    font-size: calc(10px + 2vmin);
+    color: #d3e668;
+  }
+
+  .fa-user {
+    margin-bottom: 3%;
+  }
+
+  #artistData,
+  #songData {
+    font-size: calc(4px + 2vmin);
+    color: silver;
+  }
+
+  #song-lyrics {
+    color: silver;
+    font-size: calc(2px + 2vmin);
+  }
+
+  /* End Results */
+
+  /* Begin New Search Btn */
+
+  .newSearchBtn,
+  a {
+    background: transparent;
+    border: 0;
+    color: silver;
+    transition: all 0.5s ease-out;
+    font-size: calc(3px + 2vmin);
+    text-decoration: none;
+  }
+
+  .newSearchBtn:hover,
+  a:hover {
+    color: #d3e668;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+  }
+
+  .fa-plus {
+    display: inline;
+    font-size: calc(-1px + 2vmin);
+  }
+
+  /* End New Search Btn */
+
+  /* Begin Error Handling */
+
+  .noLyrics {
+    color: red;
+    font-weight: 400;
+  }
+
+  .errorSearchBtn,
+  a {
+    background: transparent;
+    border: 0;
+    color: silver;
+    transition: all 0.5s ease-out;
+    font-size: calc(3px + 2vmin);
+    text-decoration: underline;
+  }
+
+  .errorSearchBtn:hover,
+  a:hover {
+    color: #d3e668;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+  }
+
+  /* End Error Handling */
+}
+/* End Desktop */
